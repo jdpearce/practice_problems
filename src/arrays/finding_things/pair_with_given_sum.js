@@ -9,7 +9,7 @@ function find_pair_with_given_sum(array, sum) {
     for (let i = 0; i < array.length; i++) {
 
         const other = sum - array[i];
-        if (map[other]) {
+        if (map.hasOwnProperty(other)) {
             // found a pair at map[other], i
             result.push([map[other], i]);
         }
