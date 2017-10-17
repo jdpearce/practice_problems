@@ -4,6 +4,8 @@ Given an array of bits, sort in linear time. Output should show all zeroes then 
 
 e.g. 
 
+```js
 array = [1, 0, 1, 0, 1, 0, 0, 1]
 
 result = [0, 0, 0, 0, 1, 1, 1, 1]
+```
