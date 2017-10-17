@@ -18,3 +18,13 @@ e.g.
 array = [1, -1, 2, 3, -5, 4]
 
 result = [[0, 1], [2, 4]]
+
+# Duplicate Element
+
+In a finite array of size n, containing numbers 1 to n-1, find the single repeating element.
+
+e.g.
+
+array = [1, 2, 3, 4, 4]
+
+result = 4
