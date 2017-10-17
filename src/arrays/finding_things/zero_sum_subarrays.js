@@ -1,12 +1,12 @@
 function zero_sum_subarrays(array) {
 
-    const result = []
+    const results = []
 
-    // a hash table of sums and arrays of array indices
+    // a hash table of sums and indices
     const map = {};
 
-    // insert into the map to handle case where subarray starts at index 0
-    map[0] = [-1];
+    // insert into the map to handle the case where subarray starts at index 0
+    map[0] = -1;
 
     let sum = 0;
 
@@ -19,16 +19,14 @@ function zero_sum_subarrays(array) {
         // (the intervening numbers that go above or below that 
         // line and cross it exactly each time must sum to zero)
         if (map.hasOwnProperty(sum)) {
-            const indices = map[sum];
-            result.push([indices[indices.length - 1] + 1, i]);
-        } else {
-            map[sum] = [];
+            results.push([map[sum] + 1, i]);
         }
 
-        map[sum].push(i);
+        // note that we only have to store the last time we saw this sum.
+        map[sum] = i;
     }
 
-    return result;
+    return results;
 }
 
 module.exports = zero_sum_subarrays;
